@@ -39,18 +39,22 @@
       0% { transform: translateY(-50px); opacity: 0; }
       100% { transform: translateY(0); opacity: 1; }
     }
-    logo-placeholder {
-      width: 120px;
-      height: 120px;
-      background: #fff url('logo.png') no-repeat center center;
-      background-size: cover;
-      border-radius: 50%;
-      margin: 20px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #182848;
+    .logo-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;      /* گول سرکل شکل */
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;        /* لوگو سرکل سے باہر نہ جائے */
+    background: none;        /* کوئی white یا اضافی background نہیں */
+}
+
+.logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* لوگو proportionally سرکل میں فٹ ہو جائے */
 }
     .banner-placeholder {
       width: 80%;
